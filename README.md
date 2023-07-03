@@ -12,8 +12,8 @@ The Tsunami Super WAV Trigger is a powerful audio playback device that allows yo
 - NumPy library
 - SciPy library
 - SoundFile library
-- Tsunami Super WAV Trigger connected to your audio playback system
-
+- Tsunami Super WAV Trigger (though these WAV files could be used in other contexts just as easily)
+  
 ## Usage
 
 ### Clone the repository
