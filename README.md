@@ -16,28 +16,28 @@ The Tsunami Super WAV Trigger is a powerful audio playback device that allows yo
 
 ## Usage
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/your-username/tsunami-sample-generator.git
 
-# Navigate to the project directory
+### Navigate to the project directory
 cd tsunami-sample-generator
 
-# Install the required libraries
+### Install the required libraries
 pip install numpy scipy soundfile
 
-# Connect the Tsunami Super WAV Trigger to your audio playback system
+### Connect the Tsunami Super WAV Trigger to your audio playback system
 
-# Run the script
+### Run the script
 python tsunami_sample_generator.py
 
 The script will generate audio samples for all MIDI notes and waveform shapes
 The samples will be saved in the 'samples_folder' directory
 Transfer the generated WAV files to the Tsunami Super WAV Trigger according to the device's documentation
 
-# Customization
+## Customization
 Adjust the sample_rate and duration variables in the code to modify the audio quality and duration of the generated samples.
 Modify the waveform shapes (sine, square, triangle, sawtooth) to create different audio characteristics.
 Customize the output folder path (output_folder) to specify the location where the generated samples will be saved.
 
-# Acknowledgments
+### Acknowledgments
 This script is inspired by the functionality of the Tsunami Super WAV Trigger by Sparkfun/Robertsonics.
