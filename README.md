@@ -1,3 +1,4 @@
+```bash
 # Tsunami Super WAV Trigger Sample Generator
 
 This script generates audio samples in WAV format for use with the Sparkfun/Robertsonics Tsunami Super WAV Trigger (https://www.robertsonics.com/tsunami/). Each sample corresponds to a MIDI note and a selected waveform shape, allowing you to create a wide range of audio samples.
@@ -16,7 +17,6 @@ The Tsunami Super WAV Trigger is a powerful audio playback device that allows yo
 
 ## Usage
 
-```bash
 # Clone the repository
 git clone https://github.com/your-username/tsunami-sample-generator.git
 
