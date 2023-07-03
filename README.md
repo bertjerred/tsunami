@@ -30,9 +30,9 @@ pip install numpy scipy soundfile
 # Run the script
 python tsunami_sample_generator.py
 
-# The script will generate audio samples for all MIDI notes and waveform shapes
-# The samples will be saved in the 'samples_folder' directory
-# Transfer the generated WAV files to the Tsunami Super WAV Trigger according to the device's documentation
+The script will generate audio samples for all MIDI notes and waveform shapes
+The samples will be saved in the 'samples_folder' directory
+Transfer the generated WAV files to the Tsunami Super WAV Trigger according to the device's documentation
 
 # Customization
 Adjust the sample_rate and duration variables in the code to modify the audio quality and duration of the generated samples.
