@@ -1,37 +1,43 @@
-# Tsunami Super WAV Trigger Sample Generator
+# Tsunami Super WAV Trigger Sample Generator (Bank-Aware)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8141079.svg)](https://doi.org/10.5281/zenodo.8141079)
 
-This script generates audio samples in WAV format for use with the Sparkfun/Robertsonics Tsunami Super WAV Trigger (https://www.robertsonics.com/tsunami/). Each sample corresponds to a MIDI note and a selected waveform shape, allowing you to create a wide range of audio samples.
+This script generates audio samples in WAV format specifically designed for the [Sparkfun/Robertsonics Tsunami Super WAV Trigger](https://www.robertsonics.com/tsunami/). 
 
-## Introduction
+## Overview
 
-The Tsunami Super WAV Trigger is a powerful audio playback device that allows you to trigger and play back high-quality audio samples. This script generates audio samples in WAV format that can be used with the Tsunami Super WAV Trigger. The samples are created for different MIDI notes and waveform shapes, providing flexibility in creating various sounds and tones.
+The **2025 Revision** of this tool is "Bank-Aware." It automatically generates **512 mono samples** (44.1 kHz / 16-bit) organized into four distinct instrument banks. Each track maps 1:1 to MIDI notes 0–127, allowing you to plug a MIDI controller into the Tsunami and play four different waveforms instantly on four different MIDI channels/banks.
+
+### Bank Mapping
+The script fills the first 512 tracks of the Tsunami SD card as follows:
+
+| Bank (MIDI Ch) | Waveform | Track Range | Filename Example |
+| :--- | :--- | :--- | :--- |
+| **Bank 1** | Sine | 1–128 | `0001_S1 Sine_C-2.wav` |
+| **Bank 2** | Triangle | 129–256 | `0129_S1 Triangle_C-2.wav` |
+| **Bank 3** | Sawtooth | 257–384 | `0257_S1 Saw_C-2.wav` |
+| **Bank 4** | Square | 385–512 | `0385_S1 Square_C-2.wav` |
 
 ## Requirements
 
 - Python 3.6 or above
-- NumPy library
-- SciPy library
-- SoundFile library
-- Tsunami Super WAV Trigger (though these WAV files could be used in other contexts just as easily)
-  
-## Usage
+- Tsunami Super WAV Trigger (or any sampler reading standard WAV files)
 
-### Clone the repository
-git clone https://github.com/bertjerred/tsunami
+## Installation
 
-### Navigate to the project directory
-cd tsunami
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/bertjerred/tsunami](https://github.com/bertjerred/tsunami)
+   cd tsunami
 
-### Install the required libraries
-pip install numpy scipy soundfile
+2. **Install dependencies:**
+   ```bash
+   pip install numpy scipy soundfile
 
-### Run the script
-python waves.py
+### Usage
 
-The script will generate audio samples for all MIDI notes and waveform shapes
-The samples will be saved in the 'samples_folder' directory
-Transfer the generated WAV files to the Tsunami Super WAV Trigger according to the device's documentation
+1. The script will generate a folder named samples_folder.
+2. Inside, you will find 512 WAV files correctly numbered for Tsunami banking.
+3. Copy the contents of samples_folder to the root of your Tsunami's microSD card.
 
 ## Customization
 
